@@ -48,6 +48,11 @@ export const getHistory = async () => {
     return await commonRequest("GET", `${BASE_URL}/watchhistory/`, "")
 }
 
+
+export const deleteVideoHistory = async(id)=>{
+    return await commonRequest('DELETE',`${BASE_URL}/watchhistory/${id}`,{})
+}
+
 // add history
 
 export const addHistory = async (body) => {
